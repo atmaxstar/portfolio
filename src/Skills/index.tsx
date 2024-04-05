@@ -1,4 +1,3 @@
-import React from 'react'
 import { RelativePaper } from '../Components/Paper'
 import styled from 'styled-components'
 import RaderChart from './RaderChart'

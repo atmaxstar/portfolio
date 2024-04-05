@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { RelativePaper } from '../Components/Paper'
 import chatapp from "../assets/images/chatapp.png"

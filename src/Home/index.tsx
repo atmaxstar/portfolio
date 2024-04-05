@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { RelativePaper } from '../Components/Paper'
 import github_icon from '../assets/images/github_icon.png'
