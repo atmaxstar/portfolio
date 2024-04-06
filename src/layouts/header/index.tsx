@@ -20,6 +20,10 @@ const Frame = styled.div`
     border: 2px solid ${borderColor};
     border-radius: 30px;
     width: 95%;
+
+    @media (max-width: 1300px) {
+      width: 85%;
+    }
 `
 
 const Title = styled.div`
@@ -35,7 +39,7 @@ const Sections = styled.div`
     gap: 5px;
 
     /* 画面幅が小さい場合にメニューを非表示にする */
-    @media (max-width: 768px) {
+    @media (max-width: 1300px) {
         display: none;
     }
 `
@@ -44,7 +48,7 @@ const MenuIcon = styled.div`
     display: none;
 
     /* 画面幅が小さい場合にメニューを表示する */
-    @media (max-width: 768px) {
+    @media (max-width: 1300px) {
         display: block;
         cursor: pointer;
     }
