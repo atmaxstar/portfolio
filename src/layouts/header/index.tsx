@@ -51,7 +51,7 @@ const MenuIcon = styled.div`
 `
 
 const StyledIcon = styled.i`
-    width: 50px;
+    width: 20px;
     padding: 9px 5px;
     transition: 0.3s;
     color: white;
