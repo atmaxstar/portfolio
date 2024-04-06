@@ -36,34 +36,30 @@ const ProjectContent = styled.div`
 `
 
 const ProjectName = styled.div`
-    font-size: 3em;
+    font-size: calc(7.25vw + 0.2rem);
     font-family: 'Vollkorn', serif;
     color: black;
-    
-    @media (max-width: 450px) {
-        font-size: 2em;
-    }
 `
 
 const ProjectDescription = styled.div`
-    font-size: 20px;
+    font-size: calc(3.25vw + 0.2rem);
     color: black;
 `
 
 const TechTitle = styled.div`
-    font-size: 40px;
+    font-size: calc(6.25vw + 0.2rem);
     font-family: 'Vollkorn', serif;
     color: black;
 `
 
 const TechContent = styled.div`
-    font-size: 20px;
+    font-size: calc(3.25vw + 0.2rem);
     color: black;
 `
 
 const LinkContent = styled.div`
     padding: 10px;
-    font-size: 17px;
+    font-size: calc(3.25vw + 0.2rem);
     color: black;
 `
 

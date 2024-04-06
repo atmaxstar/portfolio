@@ -54,7 +54,7 @@ const SocialLinks = styled.div`
 `
 
 const Introduction = styled.div`
-    font-size: 20px;
+    font-size: calc(3.25vw + 0.2rem);
     font-family: 'Vollkorn', serif;
     color: black;
 `
