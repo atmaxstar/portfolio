@@ -41,6 +41,11 @@ const options = {
 const Container = styled.div`
     width: 25em;
     height: 25em;
+
+    @media (max-width: 450px) {
+        width: 20em;
+        height: 20em;
+    }
 `
 
 interface Props {

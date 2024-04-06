@@ -1,17 +1,6 @@
 
 #root {
-  margin: 0;
-  padding: 0;
   background: #A1D6E2;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  overflowX: hidden;
-  overflowY: auto;
 }
 
 ::-webkit-scrollbar {
