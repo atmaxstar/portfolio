@@ -54,9 +54,13 @@ const SocialLinks = styled.div`
 `
 
 const Introduction = styled.div`
-    font-size: calc(3.25vw + 0.2rem);
+    font-size: 20px;
     font-family: 'Vollkorn', serif;
     color: black;
+    
+    @media (max-width: 600px) {
+        font-size: 17px;
+    }
 `
 
 const Home = () => {

@@ -32,34 +32,50 @@ const ProjectContent = styled.div`
 
     @media (max-width: 450px) {
         width: 70%;
-      }
+    }
 `
 
 const ProjectName = styled.div`
-    font-size: calc(7.25vw + 0.2rem);
+    font-size: 3em;
     font-family: 'Vollkorn', serif;
     color: black;
+    
+    @media (max-width: 600px) {
+        font-size: 2em;
+    }
 `
 
 const ProjectDescription = styled.div`
-    font-size: calc(3.25vw + 0.2rem);
+    font-size: 20px;
     color: black;
+
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
 `
 
 const TechTitle = styled.div`
-    font-size: calc(6.25vw + 0.2rem);
+    font-size: 40px;
     font-family: 'Vollkorn', serif;
     color: black;
+
+    @media (max-width: 600px) {
+        font-size: 25px;
+    }
 `
 
 const TechContent = styled.div`
-    font-size: calc(3.25vw + 0.2rem);
+    font-size: 20px;
     color: black;
+
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
 `
 
 const LinkContent = styled.div`
     padding: 10px;
-    font-size: calc(3.25vw + 0.2rem);
+    font-size: 17px;
     color: black;
 `
 
