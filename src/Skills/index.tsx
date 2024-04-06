@@ -21,7 +21,6 @@ const Title = styled.div`
 const ChartLine = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* チャートの列を自動的に調整 */
-    grid-gap: 20px; /* チャート間の余白 */
 `
   
 const Skills = () => {
