@@ -21,11 +21,15 @@ ChartJS.register(
 );
 
 const options = {
+    scale: {
+      ticks: {
+        stepSize: 1, // 目盛りの間隔を1に設定
+      },
+    },
     scales: {
         r: {
             min: 0,
             max: 5,
-            stepSize: 1,
         },
     },
 };
