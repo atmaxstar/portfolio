@@ -25,8 +25,8 @@ const Frame = styled.div`
       width: 85%;
     }
     
-    @media (max-width: 400px) {
-      width: 70%;
+    @media (max-width: 450px) {
+      width: 60%;
     }
 `
 
