@@ -9,6 +9,7 @@ import {
     ChartData,
   } from 'chart.js';
   import { Radar } from 'react-chartjs-2';
+import styled from 'styled-components';
   
 
 ChartJS.register(
@@ -21,6 +22,9 @@ ChartJS.register(
 );
 
 const options = {
+    layout: {
+      padding: 40, // チャートの余白を設定
+    },
     scale: {
       ticks: {
         stepSize: 1, // 目盛りの間隔を1に設定
@@ -34,12 +38,21 @@ const options = {
     },
 };
 
+const Container = styled.div`
+    width: 25em;
+    height: 25em;
+`
+
 interface Props {
     data: ChartData<"radar", (number | null)[], unknown>;
 }
 
 const RaderChart = ({data}: Props) => {
-  return <Radar data={data} options={options}/>;
+  return (
+        <Container>
+            <Radar data={data} options={options}/>
+        </Container>
+  );
 }
 
 export default RaderChart

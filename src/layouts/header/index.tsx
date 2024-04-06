@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { borderColor, mainColor, textColor } from '../../colors'
 import Section from './Section'
 import { useGetCurrentSection } from './useGetCurrentSection'
-
 
 const Frame = styled.div`
     height: 50px;
@@ -27,20 +26,44 @@ const Title = styled.div`
     font-size: 35px;
     font-family: Anton, sans-serif;
     font-weight: 200;
-    flex-grow: 1
+    flex-grow: 1;
 `
 
 const Sections = styled.div`
     display: flex;
     flex-direction: row;
     gap: 5px;
+
+    /* 画面幅が小さい場合にメニューを非表示にする */
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
+const MenuIcon = styled.div`
+    display: none;
+
+    /* 画面幅が小さい場合にメニューを表示する */
+    @media (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+    }
+`
+
+const StyledIcon = styled.i`
+    width: 50px;
+    padding: 9px 5px;
+    transition: 0.3s;
+    color: white;
 `
 
 const Space = styled.div`
     width: 100%;
-    height: 90px;
+    height: 150px;
     background: inherit;
 `
+
+export const MARGIN = 170;
 
 interface Props {
     ref1: React.RefObject<HTMLDivElement>;
@@ -52,25 +75,35 @@ interface Props {
 const Header = ({ ref1, ref2, ref3, ref4 }: Props) => {
 
   const currentSection = useGetCurrentSection({ ref1, ref2, ref3, ref4 });
-    
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
     window.scroll({
-      top: (ref.current as HTMLDivElement).offsetTop - 70,
+      top: (ref.current as HTMLDivElement).offsetTop - MARGIN,
       behavior: 'smooth'
     });
+    setShowMenu(false); // メニュー項目がクリックされた後にメニューを閉じる
   };
 
   return (
     <>
     <Frame>
+        <MenuIcon onClick={toggleMenu}>
+          <StyledIcon className="fa fa-bars" aria-hidden="true"/>
+        </MenuIcon>
+
         <Title>
             {"Atsutoshi Honda"}
         </Title>
         <Sections>
-            <Section text='Home' selected={currentSection=='HOME'} onClick={() => scrollToRef(ref1)}/>
-            <Section text='Projects' selected={currentSection=='PROJECTS'} onClick={() => scrollToRef(ref2)}/>
-            <Section text='Skills' selected={currentSection=='SKILLS'} onClick={() => scrollToRef(ref3)}/>
-            <Section text='Contact' selected={currentSection=='CONTACT'} onClick={() => scrollToRef(ref4)}/>
+            <Section text='Home' selected={currentSection==='HOME'} onClick={() => scrollToRef(ref1)}/>
+            <Section text='Projects' selected={currentSection==='PROJECTS'} onClick={() => scrollToRef(ref2)}/>
+            <Section text='Skills' selected={currentSection==='SKILLS'} onClick={() => scrollToRef(ref3)}/>
+            <Section text='Contact' selected={currentSection==='CONTACT'} onClick={() => scrollToRef(ref4)}/>
         </Sections>
     </Frame>
 

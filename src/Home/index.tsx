@@ -10,6 +10,7 @@ const Role = styled.div`
     left: 0;
     padding: 0 10px;
     margin: 0;
+    max-width: 70%;
     background-color: white;
     transform: translateY(-50%) translateX(1em);  
     border: 1px solid black;
@@ -17,26 +18,26 @@ const Role = styled.div`
 
     font-size: 40px;
     font-family: 'Caveat', cursive;
-    // -webkit-text-fill-color: lavender; /* （順序に関係なく）色を上書きする */
-    // -webkit-text-stroke: 1px black;
 `
 
 const NameContainer = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
 const Name = styled.div`
     font-size: 55px;
     font-family: 'Caveat', cursive;
     color: black;
-    flex-grow: 1;
+    justify-self: start;
 `
 
 const SocialLinks = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1em;
+    justify-self: end;
 `
 
 const Introduction = styled.div`

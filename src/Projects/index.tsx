@@ -19,12 +19,12 @@ const Title = styled.div`
 `
 
 const Content = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 `
 
 const ProjectContent = styled.div`
-    width: 40%;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ const ProjectContent = styled.div`
 `
 
 const ProjectName = styled.div`
-    font-size: 55px;
+    font-size: 3em;
     font-family: 'Vollkorn', serif;
     color: black;
 `
@@ -68,7 +68,7 @@ const Projects = () => {
 
         <Content>
             
-        <img style={{borderRadius: 20}} src={chatapp} alt="chatapp" width="60%" height="auto"/>
+        <img style={{borderRadius: 20}} src={chatapp} alt="chatapp" width="100%" height="auto"/>
         <ProjectContent>
             <ProjectName>
                 {"My Chat App"}
