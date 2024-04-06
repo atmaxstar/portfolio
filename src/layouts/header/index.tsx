@@ -24,10 +24,11 @@ const Frame = styled.div`
     @media (max-width: 1300px) {
       width: 85%;
     }
-    
+
     @media (max-width: 450px) {
-      width: 60%;
+      width: 75%;
     }
+    
 `
 
 const Title = styled.div`
@@ -35,6 +36,7 @@ const Title = styled.div`
     font-family: Anton, sans-serif;
     font-weight: 200;
     flex-grow: 1;
+    
 `
 
 const Sections = styled.div`

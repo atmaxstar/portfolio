@@ -18,6 +18,10 @@ const Role = styled.div`
 
     font-size: 40px;
     font-family: 'Caveat', cursive;
+    
+    @media (max-width: 450px) {
+      font-size: 30px;
+    }
 `
 
 const NameContainer = styled.div`
@@ -31,6 +35,10 @@ const Name = styled.div`
     font-family: 'Caveat', cursive;
     color: black;
     justify-self: start;
+    
+    @media (max-width: 450px) {
+      font-size: 40px;
+    }
 `
 
 const SocialLinks = styled.div`
@@ -38,6 +46,11 @@ const SocialLinks = styled.div`
     flex-direction: row;
     gap: 1em;
     justify-self: end;
+    
+    
+    @media (max-width: 450px) {
+        justify-self: start;
+    }
 `
 
 const Introduction = styled.div`

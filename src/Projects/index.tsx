@@ -29,12 +29,20 @@ const ProjectContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 450px) {
+        width: 70%;
+      }
 `
 
 const ProjectName = styled.div`
     font-size: 3em;
     font-family: 'Vollkorn', serif;
     color: black;
+    
+    @media (max-width: 450px) {
+        font-size: 2em;
+    }
 `
 
 const ProjectDescription = styled.div`
@@ -68,7 +76,7 @@ const Projects = () => {
 
         <Content>
             
-        <img style={{borderRadius: 20}} src={chatapp} alt="chatapp" width="100%" height="auto"/>
+        <img style={{borderRadius: 20}} src={chatapp} alt="chatapp" width="90%" height="auto"/>
         <ProjectContent>
             <ProjectName>
                 {"My Chat App"}
