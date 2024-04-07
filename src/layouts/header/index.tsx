@@ -39,7 +39,7 @@ const Title = styled.div`
     flex-grow: 1;
 
     @media (max-width: 450px) {
-      font-size: 20px;
+      font-size: 27px;
     }
     
 `
