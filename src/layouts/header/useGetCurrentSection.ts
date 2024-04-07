@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-type TargetViewPosition = 'NONE' | 'HOME' | 'PROJECTS' | 'SKILLS' | 'CONTACT';
+type TargetViewPosition = 'HOME' | 'PROJECTS' | 'SKILLS' | 'CONTACT';
 
 const MARGIN = 200;
 
@@ -14,7 +14,7 @@ interface Props {
 export function useGetCurrentSection({ ref1, ref2, ref3, ref4 }: Props) {
   const [targetViewPosition, setTargetViewPosition] = useState<
     TargetViewPosition
-  >('NONE');
+  >('HOME');
   
 
   useEffect(() => {
@@ -28,8 +28,6 @@ export function useGetCurrentSection({ ref1, ref2, ref3, ref4 }: Props) {
             setTargetViewPosition('PROJECTS');
         } else if (ref1.current && window.scrollY >= ref1.current.offsetTop - MARGIN){
             setTargetViewPosition('HOME');
-        } else {
-            setTargetViewPosition('NONE');
         }
     }
     

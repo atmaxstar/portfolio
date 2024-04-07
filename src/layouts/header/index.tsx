@@ -37,6 +37,10 @@ const Title = styled.div`
     font-family: Anton, sans-serif;
     font-weight: 200;
     flex-grow: 1;
+
+    @media (max-width: 450px) {
+      font-size: 20px;
+    }
     
 `
 
