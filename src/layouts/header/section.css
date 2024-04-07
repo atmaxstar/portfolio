@@ -43,3 +43,13 @@
         transform: translateY(3px);
     }
 }
+
+.selectedIcon {
+    color: white;
+    cursor: pointer;
+}
+
+.styledIcon {
+    color: #aaaaaa;
+    cursor: pointer;
+}

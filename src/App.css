@@ -1,6 +1,7 @@
 
 #root {
   background: #A1D6E2;
+  overflow-X: hidden;
 }
 
 ::-webkit-scrollbar {

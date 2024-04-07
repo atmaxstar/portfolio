@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { borderColor, mainColor, textColor } from '../../colors'
 import Section from './Section'
 import { useGetCurrentSection } from './useGetCurrentSection'
+import SectionIcon from './SectionIcon'
 
 const Frame = styled.div`
     height: 50px;
@@ -50,6 +51,22 @@ const Sections = styled.div`
     }
 `
 
+const Sections_Icon = styled.div`
+    display: none;
+
+    /* 画面幅が小さい場合にメニューを非表示にする */
+    @media (max-width: 1300px) {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        @media (max-width: 500px) {
+          gap: 10px;
+      }
+    }
+`
+
+
 const MenuIcon = styled.div`
     display: none;
 
@@ -58,13 +75,6 @@ const MenuIcon = styled.div`
         display: block;
         cursor: pointer;
     }
-`
-
-const StyledIcon = styled.i`
-    width: 20px;
-    padding: 9px 5px;
-    transition: 0.3s;
-    color: white;
 `
 
 const Space = styled.div`
@@ -85,25 +95,18 @@ interface Props {
 const Header = ({ ref1, ref2, ref3, ref4 }: Props) => {
 
   const currentSection = useGetCurrentSection({ ref1, ref2, ref3, ref4 });
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
 
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
     window.scroll({
       top: (ref.current as HTMLDivElement).offsetTop - MARGIN,
       behavior: 'smooth'
     });
-    setShowMenu(false); // メニュー項目がクリックされた後にメニューを閉じる
   };
 
   return (
     <>
     <Frame>
-        <MenuIcon onClick={toggleMenu}>
-          <StyledIcon className="fa fa-bars" aria-hidden="true"/>
+        <MenuIcon>
         </MenuIcon>
 
         <Title>
@@ -115,8 +118,13 @@ const Header = ({ ref1, ref2, ref3, ref4 }: Props) => {
             <Section text='Skills' selected={currentSection==='SKILLS'} onClick={() => scrollToRef(ref3)}/>
             <Section text='Contact' selected={currentSection==='CONTACT'} onClick={() => scrollToRef(ref4)}/>
         </Sections>
+        <Sections_Icon>
+          <SectionIcon section={'HOME'} onClick={() => scrollToRef(ref1)} selected={currentSection==='HOME'}/>
+          <SectionIcon section={'PROJECTS'} onClick={() => scrollToRef(ref2)} selected={currentSection==='PROJECTS'}/>
+          <SectionIcon section={'SKILLS'} onClick={() => scrollToRef(ref3)} selected={currentSection==='SKILLS'}/>
+          <SectionIcon section={'CONTACT'} onClick={() => scrollToRef(ref4)} selected={currentSection==='CONTACT'}/>
+        </Sections_Icon>
     </Frame>
-
     <Space/>
     </>
   )
