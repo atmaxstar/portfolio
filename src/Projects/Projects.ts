@@ -30,6 +30,8 @@ export const PROJECTS = [
             'Tailwind css',
             'Gemini API',
             'Speech Recognition',
+            'Prisma',
+            'NextAuth.js',
         ],
         link_github: INTELTS_GITHUB_URL,
         link_site: INTELTS__LINK_URL,
