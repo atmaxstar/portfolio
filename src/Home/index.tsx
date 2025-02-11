@@ -86,7 +86,7 @@ const Home = () => {
         <Introduction>
             {"Software engineering with a passion for developing software that solves people's problems"}
             <br/>
-            {"Have 1.5 years experience in web development as an intern, dedicated to improving UX with an emphasis on system performance and intuitive usability."}
+            {"Will bring experience in web development, dedicated to improving UX with an emphasis on system performance and intuitive usability"}
         </Introduction>
     </RelativePaper>
   )

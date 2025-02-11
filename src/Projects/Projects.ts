@@ -4,22 +4,6 @@ import img_src_intelts from '../assets/images/intelts.png'
 
 export const PROJECTS = [
     {
-        name: 'My Chat App',
-        description: [
-            'This is the app for real-time chatting.',
-            'It allow multiple users to communicate in a group.'
-        ],
-        techContents: [
-            'ASP.NET',
-            'Next.js',
-            'Material UI',
-            'SignalR'
-        ],
-        link_github: MYCHATAPP_GITHUB_URL,
-        link_site: MYCHATAPP_LINK_URL,
-        img_src: img_src_chatapp,
-    },
-    {
         name: 'Intelts',
         description: [
             'This is the app for practicing IELTS and behavioral interview.',
@@ -36,5 +20,21 @@ export const PROJECTS = [
         link_github: INTELTS_GITHUB_URL,
         link_site: INTELTS__LINK_URL,
         img_src: img_src_intelts,
+    },
+    {
+        name: 'My Chat App',
+        description: [
+            'This is the app for real-time chatting.',
+            'It allow multiple users to communicate in a group.'
+        ],
+        techContents: [
+            'ASP.NET',
+            'Next.js',
+            'Material UI',
+            'SignalR'
+        ],
+        link_github: MYCHATAPP_GITHUB_URL,
+        link_site: MYCHATAPP_LINK_URL,
+        img_src: img_src_chatapp,
     },
 ]
